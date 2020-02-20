@@ -8,12 +8,13 @@ import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 import { InvoiceSendComponent } from './components/shared/invoice-send/invoice-send.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     DialogExampleComponent,
-    InvoiceSendComponent
+    InvoiceSendComponent,
   ],
   entryComponents: [
     DialogExampleComponent
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
