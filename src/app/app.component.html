@@ -1,8 +1,21 @@
-<div class="container">
-  <h1>hola</h1>
-  <div class="alert alert-primary" role="alert">
-    A simple primary alert—check it out!
-  </div>
-
-  <button mat-raised-button (click)="openDialog()">show dialog</button>
+<div class="d-flex flex-column h-100">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Responsive App</h1>
+  </mat-toolbar>
+  <mat-sidenav-container class="flex-grow-1">
+    <mat-sidenav hasBackdrop="true" #snav mode="mode">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['lazy-one']">Lazy 1</a>
+        <a mat-list-item [routerLink]="['lazy-two']">Lazy 2</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container flex-grow-1" style="background-color: aqua;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
